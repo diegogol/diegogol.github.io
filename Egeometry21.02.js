@@ -1,3 +1,13 @@
+var forma=new THREE.Geometry();
+forma.vertices.push(new THREE.Vector3(1,0,1));
+forma.vertices.push(new THREE.Vector3(1,0,-1));
+forma.vertices.push(new THREE.Vector3(-1,0,-1));
+forma.vertices.push(new THREE.Vector3(-1,0,1));
+forma.vertices.push(new THREE.Vector3(0,1,0));
+
+forma.computeBoundingSphere();
+forma.computeFaceNormals();
+
 var material = new THREE.MeshNormalMaterial();
 
 var malla = new THREE.Mesh( forma, material );
