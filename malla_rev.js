@@ -1,8 +1,8 @@
 var puntos = [];
 for ( var i = 0; i < 80; i ++ ) {
     puntos.push( new THREE.Vector2(
-                     Math.sin( i * 0.2 ) * 15 + 50,
-                     ( i - 5 ) * 2 ) );
+                     Math.sin( i * 0.4 ) * 15 + 50,
+                     ( i - 5 ) * 3) );
 }
 var forma = new THREE.LatheGeometry(puntos);
 
