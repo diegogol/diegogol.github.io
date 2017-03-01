@@ -1,5 +1,5 @@
 var puntos = [];
-for ( var i = 0; i < 40; i ++ ) {
+for ( var i = 0; i < 50; i ++ ) {
   if (i<15){
     puntos.push( new THREE.Vector2( i,40);    
   }
@@ -17,7 +17,7 @@ var forma = new THREE.LatheGeometry(puntos);
 var material = new THREE.MeshNormalMaterial();
 
 var malla = new THREE.Mesh( forma, material );
-malla.rotateY( Math.PI/2 );
+malla.rotateX( Math.PI/2 );
 var escena = new THREE.Scene();
 escena.add(malla);
 
