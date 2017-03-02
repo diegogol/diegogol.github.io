@@ -1,14 +1,14 @@
 var puntos = [];
 for (var i=0; i<45; i++) {
   if (i<15){
-    puntos.push( new THREE.Vector2( i,40);    
+    puntos.push( new THREE.Vector2( i,40));    
   }
    if (i>15&&i<30){
-    puntos.push( new THREE.Vector2( 15,56-i);    
+    puntos.push( new THREE.Vector2( 15,56-i));    
   }
 
    if (i>30&&i<45){
-    puntos.push( new THREE.Vector2( 45-i,25);    
+    puntos.push( new THREE.Vector2( 45-i,25));    
   }
   /* if (i>45&&i<60){
     puntos.push( new THREE.Vector2(-46+i,70-i);   
