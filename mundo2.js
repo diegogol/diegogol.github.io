@@ -55,7 +55,7 @@ for (var i=0; i<76; i++) {
                 
 var formaT = new THREE.LatheGeometry(puntos);
 var materialT = new THREE.MeshNormalMaterial();
-FormaT.translate(40,0,0);
+formaT.translate(40,0,0);
 var mallaT = new THREE.Mesh( formaT, materialT);
 
 
