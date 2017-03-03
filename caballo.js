@@ -9,7 +9,7 @@ forma.vertices.push(new THREE.Vector3(-1,0,-.4));
 forma.vertices.push(new THREE.Vector3(-1,0,-.5));
 forma.vertices.push(new THREE.Vector3(0,0,-1));
 forma.vertices.push(new THREE.Vector3(1,0,-.5));
-forma.vertices.push(new THREE.Vector3(1,1,.2));
+forma.vertices.push(new THREE.Vector3(1,0,.2));
 
 forma.faces.push( new THREE.Face3( 0, 9, 1 ) ); // Cara 0
 forma.faces.push( new THREE.Face3( 1, 3, 2 ) ); // Cara 1
