@@ -1,15 +1,15 @@
 var forma=new THREE.Geometry();
 
-forma.vertices.push(new THREE.Vector3(0,0,1));
-forma.vertices.push(new THREE.Vector3(0,0,.5));
-forma.vertices.push(new THREE.Vector3(-1,0,.4));
-forma.vertices.push(new THREE.Vector3(-1,0,.2));
-forma.vertices.push(new THREE.Vector3(-.4,0,-.2));
-forma.vertices.push(new THREE.Vector3(-1,0,-.4));
-forma.vertices.push(new THREE.Vector3(-1,0,-.5));
-forma.vertices.push(new THREE.Vector3(0,0,-1));
-forma.vertices.push(new THREE.Vector3(1,0,-.5));
-forma.vertices.push(new THREE.Vector3(1,0,.2));
+forma.vertices.push(new THREE.Vector3(1,0,0));
+forma.vertices.push(new THREE.Vector3(0.5,0,0));
+forma.vertices.push(new THREE.Vector3(.4,0,-1));
+forma.vertices.push(new THREE.Vector3(.2,0,-1));
+forma.vertices.push(new THREE.Vector3(-.2,0,-.2));
+forma.vertices.push(new THREE.Vector3(-.4,0,-1));
+forma.vertices.push(new THREE.Vector3(-.6,0,-1));
+forma.vertices.push(new THREE.Vector3(-1,0,0));
+forma.vertices.push(new THREE.Vector3(-.5,0,1));
+forma.vertices.push(new THREE.Vector3(.2,0,1));
 
 forma.faces.push( new THREE.Face3( 0, 9, 1 ) ); // Cara 0
 forma.faces.push( new THREE.Face3( 1, 3, 2 ) ); // Cara 1
