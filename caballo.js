@@ -15,12 +15,11 @@ forma.faces.push( new THREE.Face3( 0, 9, 1 ) ); // Cara 0
 forma.faces.push( new THREE.Face3( 1, 3, 2 ) ); // Cara 1
 forma.faces.push( new THREE.Face3( 1, 9, 4 ) ); // Cara 2
 forma.faces.push( new THREE.Face3( 1, 4, 3 ) ); // Cara 3
-forma.faces.push( new THREE.Face3( 1, 2, 4 ) ); // Cara 4
-forma.faces.push( new THREE.Face3( 9, 8, 4 ) ); // Cara 5
-forma.faces.push( new THREE.Face3( 4, 6, 5 ) ); // Cara 6
-forma.faces.push( new THREE.Face3( 2, 3, 4 ) ); // Cara 7
-forma.faces.push( new THREE.Face3( 7, 6, 4 ) ); // Cara 8
-forma.faces.push( new THREE.Face3( 8, 7, 4 ) ); // Cara 9
+forma.faces.push( new THREE.Face3( 9, 8, 4 ) ); // Cara 4
+forma.faces.push( new THREE.Face3( 4, 6, 5 ) ); // Cara 5
+forma.faces.push( new THREE.Face3( 4, 7, 6 ) ); // Cara 6
+forma.faces.push( new THREE.Face3( 8, 7, 4 ) ); // Cara 7
+
 
 forma.computeBoundingSphere();
 forma.computeFaceNormals();
