@@ -13,8 +13,15 @@ for (var i=0; i<76; i++) {
   if (i>40&&i<60){
     puntos.push( new THREE.Vector2(-41+i,70-i));   
                 }
-   if (i>60&&i<75){
-    puntos.push( new THREE.Vector2(75-i,10));    
+  if (i>60&&i<65){
+    puntos.push( new THREE.Vector2(-41+i,10));    
+  }
+  if (i>65&&i<75){
+    puntos.push( new THREE.Vector2(24,76-i));    
+  }
+  
+  if (i>75&&i<85){
+    puntos.push( new THREE.Vector2(85-i,0));    
   }             
 }
                 
