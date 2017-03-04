@@ -44,14 +44,15 @@ var mallaT = new THREE.Mesh( formaT, materialT);
 
 //tablero
 var formaTabl=new THREE.Geometry();
-formaTabl.vertices.push(new THREE.Vector3(60,-5,60));//0
-formaTabl.vertices.push(new THREE.Vector3(60,-5,-60));//1
-formaTabl.vertices.push(new THREE.Vector3(-60,-5,-60));//2
-formaTabl.vertices.push(new THREE.Vector3(-60,-5,60));//3
-formaTabl.vertices.push(new THREE.Vector3(60,-10,60));//4
-formaTabl.vertices.push(new THREE.Vector3(60,-10,-60));//5
-formaTabl.vertices.push(new THREE.Vector3(-60,-10,-60));//6
-formaTabl.vertices.push(new THREE.Vector3(-60,-10,60));//7
+formaTabl.vertices.push(new THREE.Vector3(200,0,200));//0
+formaTabl.vertices.push(new THREE.Vector3(200,0,-200));//1
+formaTabl.vertices.push(new THREE.Vector3(-200,0,-200));//2
+formaTabl.vertices.push(new THREE.Vector3(-200,0,200));//3
+formaTabl.vertices.push(new THREE.Vector3(200,-5,200));//4
+formaTabl.vertices.push(new THREE.Vector3(200,-5,-200));//5
+formaTabl.vertices.push(new THREE.Vector3(-200,-5,-200));//6
+formaTabl.vertices.push(new THREE.Vector3(-200,-5,200));//7
+
 
 formaTabl.faces.push( new THREE.Face3( 0, 1, 3 ) ); // Cara 0
 formaTabl.faces.push( new THREE.Face3( 1, 2, 3 ) ); // Cara 1
@@ -77,7 +78,7 @@ escena.add(mallaT);
 escena.add(mallaTabl);
 
 var camara = new THREE.PerspectiveCamera();
-camara.position.z = 200;
+camara.position.z = 300;
 
 renderizador = new THREE.WebGLRenderer();
 renderizador.setSize( window.innerHeight*.95, window.innerHeight*.95 );
