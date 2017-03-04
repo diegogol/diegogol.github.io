@@ -11,7 +11,7 @@ if(j>17){    puntos1.push( new THREE.Vector2(22-j,-8));}
 }
 var formaA2 = new THREE.LatheGeometry(puntos1);
 var materialA2 = new THREE.MeshBasicMaterial( {color: 0xffff00} );
-formaA2.translate(55,0,0);
+formaA2.translate(55,20,0);
 var mallaA2 = new THREE.Mesh( formaA2, materialA2);
 
 //Reina BANDO 1
@@ -35,7 +35,7 @@ rein2.lineTo(0, 0);
 
 var formaR2= new THREE.ExtrudeGeometry( rein2,{amount: 1} );
 var materialR2= new THREE.MeshBasicMaterial( {color: 0xffff00} );
-formaR2.translate(30,-40,0);
+formaR2.translate(30,0,0);
 var mallaR2= new THREE.Mesh( formaR2,materialR2);
 
 //PEON BANDO 1
@@ -56,7 +56,7 @@ peonForma1.merge(troncoMalla1.geometry, troncoMalla1.matrix);
 peonForma1.merge(picoMalla1.geometry, picoMalla1.matrix);
 
 var materialP1= new THREE.MeshBasicMaterial( {color: 0xffff00} );
-peonForma1.translate(10,-40,0);
+peonForma1.translate(70,-40,0);
 var peonMalla1= new THREE.Mesh(peonForma1,materialP1);
 
 //Rey
