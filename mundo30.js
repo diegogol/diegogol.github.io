@@ -69,7 +69,7 @@ formaTabl.faces.push( new THREE.Face3( 7, 4, 0 ) ); // Cara 10
 
 formaTabl.computeBoundingSphere();
 formaTabl.computeFaceNormals();
-var materialTabl = new THREE.MeshBasicMaterial( {color: 0xffff00} );
+var materialTabl = new THREE.MeshBasicMaterial( {color: 0x993300} );
 var mallaTabl= new THREE.Mesh( formaTabl, materialTabl );
 
 //Caballo
