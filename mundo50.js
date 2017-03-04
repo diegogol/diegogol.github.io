@@ -35,7 +35,7 @@ rein2.lineTo(0, 0);
 
 var formaR2= new THREE.ExtrudeGeometry( rein2,{amount: 1} );
 var materialR2= new THREE.MeshBasicMaterial( {color: 0xffff00} );
-formaR2.translate(30,0,0);
+formaR2.translate(30,0,100);
 var mallaR2= new THREE.Mesh( formaR2,materialR2);
 
 //PEON BANDO 1
@@ -84,7 +84,7 @@ arbolForma.merge(troncoMalla3.geometry, troncoMalla3.matrix);
 arbolForma.merge(troncoMalla4.geometry, troncoMalla4.matrix);
 
 var materialRey = new THREE.MeshBasicMaterial( {color: 0xffff00} );
-arbolForma.translate(0,0,0);
+arbolForma.translate(0,0,100);
 var arbolMalla = new THREE.Mesh(arbolForma, materialRey);
 
 //torre
@@ -100,7 +100,7 @@ for (var i=0; i<76; i++) {
 }              
 var formaT = new THREE.LatheGeometry(puntos);
 var materialT = new THREE.MeshBasicMaterial( {color: 0xffff00} );
-formaT.translate(60,-10,0);
+formaT.translate(60,-10,100);
 var mallaT = new THREE.Mesh( formaT, materialT);
 
 //tablero
@@ -162,7 +162,7 @@ arbolFormaCa.merge(mallabase.geometry, mallabase.matrix);
 arbolFormaCa.merge(mallaCa.geometry, mallaCa.matrix);
 
 var materialCa = new THREE.MeshBasicMaterial( {color: 0xffff00} );
-arbolFormaCa.translate(90,0,0);
+arbolFormaCa.translate(110,0,100);
 var arbolmallacab = new THREE.Mesh(arbolFormaCa, materialCa);
 
 //bando 2 Verde
