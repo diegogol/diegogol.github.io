@@ -11,7 +11,7 @@ if(j>17){    puntos1.push( new THREE.Vector2(22-j,-8));}
 }
 var formaA2 = new THREE.LatheGeometry(puntos1);
 var materialA2 = new THREE.MeshBasicMaterial( {color: 0xffff00} );
-formaA2.translate(55,10,70);
+formaA2.translate(55,50,70);
 var mallaA2 = new THREE.Mesh( formaA2, materialA2);
 
 //Reina BANDO 1
