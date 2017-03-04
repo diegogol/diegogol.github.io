@@ -7,7 +7,7 @@ var esferaForma = new THREE.SphereGeometry(5);
 esferaForma.translate(0,10,0);
 troncoForma2.translate(0,-10,0);
 troncoForma3.translate(0,-15,0);
-troncoForma4.translate(0,-30);
+troncoForma4.translate(0,-25,0);
 
 var troncoMalla = new THREE.Mesh(troncoForma);
 var troncoMalla2 = new THREE.Mesh(troncoForma2);
@@ -55,7 +55,7 @@ for (var i=0; i<76; i++) {
                 
 var formaT = new THREE.LatheGeometry(puntos);
 var materialT = new THREE.MeshNormalMaterial();
-formaT.translate(40,0,0);
+formaT.translate(60,0,0);
 var mallaT = new THREE.Mesh( formaT, materialT);
 
 
