@@ -1,13 +1,13 @@
 //Rey
-var troncoForma = new THREE.CylinderGeometry(8, 5, 15);
-var troncoForma2 = new THREE.CylinderGeometry(10, 10, 5);
-var troncoForma3= new THREE.CylinderGeometry(3, 6, 15);
-var troncoForma4= new THREE.CylinderGeometry(9, 5, 10);
-var esferaForma = new THREE.SphereGeometry(5);
-esferaForma.translate(0,35,0);
-troncoForma.translate(0,25,0);
-troncoForma2.translate(0,15,0);
-troncoForma3.translate(0,10,0);
+var troncoForma = new THREE.CylinderGeometry(18, 15, 25);
+var troncoForma2 = new THREE.CylinderGeometry(20, 20, 15);
+var troncoForma3= new THREE.CylinderGeometry(13, 16, 25);
+var troncoForma4= new THREE.CylinderGeometry(19, 15, 20);
+var esferaForma = new THREE.SphereGeometry(15);
+esferaForma.translate(0,70,0);
+troncoForma.translate(0,50,0);
+troncoForma2.translate(0,30,0);
+troncoForma3.translate(0,20,0);
 troncoForma4.translate(0,0,0);
 
 var troncoMalla = new THREE.Mesh(troncoForma);
