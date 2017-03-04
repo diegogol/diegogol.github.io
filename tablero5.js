@@ -14,7 +14,7 @@ forma.faces.push( new THREE.Face3( 0, 1, 3 ) ); // Cara 0
 forma.faces.push( new THREE.Face3( 1, 2, 3 ) ); // Cara 1
 forma.faces.push( new THREE.Face3( 4, 5, 7 ) ); // Cara 2
 forma.faces.push( new THREE.Face3( 5, 6, 7 ) ); // Cara 3
-forma.faces.push( new THREE.Face3( 1, 0, 4 ) ); // Cara 4
+forma.faces.push( new THREE.Face3( 4, 0, 1 ) ); // Cara 4
 forma.faces.push( new THREE.Face3( 1, 5, 4 ) ); // Cara 5
 forma.faces.push( new THREE.Face3( 6, 5, 1 ) ); // Cara 6
 forma.faces.push( new THREE.Face3( 1, 2, 6 ) ); // Cara 7
