@@ -52,17 +52,47 @@ for (var i=0; i<76; i++) {
   if (i>75&&i<85){
     puntos.push( new THREE.Vector2(85-i,0));    
   }             
-}
-                
+}              
 var formaT = new THREE.LatheGeometry(puntos);
 var materialT = new THREE.MeshNormalMaterial();
 formaT.translate(60,-10,0);
 var mallaT = new THREE.Mesh( formaT, materialT);
 
+//tablero
+var formaTabl=new THREE.Geometry();
+
+formaTabl.vertices.push(new THREE.Vector3(60,0,60));//0
+formaTabl.vertices.push(new THREE.Vector3(60,0,-60));//1
+formaTabl.vertices.push(new THREE.Vector3(-60,0,-60));//2
+formaTabl.vertices.push(new THREE.Vector3(-60,0,60));//3
+
+formaTabl.vertices.push(new THREE.Vector3(60,-5,60));//4
+formaTabl.vertices.push(new THREE.Vector3(60,-5,-60));//5
+formaTabl.vertices.push(new THREE.Vector3(-60,-5,-60));//6
+formaTabl.vertices.push(new THREE.Vector3(-60,-5,60));//7
+
+formaTabl.faces.push( new THREE.Face3( 0, 1, 3 ) ); // Cara 0
+formaTabl.faces.push( new THREE.Face3( 1, 2, 3 ) ); // Cara 1
+formaTabl.faces.push( new THREE.Face3( 4, 5, 7 ) ); // Cara 2
+formaTabl.faces.push( new THREE.Face3( 5, 6, 7 ) ); // Cara 3
+formaTabl.faces.push( new THREE.Face3( 4, 0, 1 ) ); // Cara 4
+formaTabl.faces.push( new THREE.Face3( 1, 5, 4 ) ); // Cara 5
+formaTabl.faces.push( new THREE.Face3( 6, 2, 1 ) ); // Cara 6
+formaTabl.faces.push( new THREE.Face3( 1, 5, 6 ) ); // Cara 7
+formaTabl.faces.push( new THREE.Face3( 2, 6, 7 ) ); // Cara 8
+formaTabl.faces.push( new THREE.Face3( 2, 3, 7 ) ); // Cara 9
+formaTabl.faces.push( new THREE.Face3( 0, 3, 7 ) ); // Cara 10
+formaTabl.faces.push( new THREE.Face3( 7, 4, 0 ) ); // Cara 10
+
+formaTabl.computeBoundingSphere();
+formaTabl.computeFaceNormals();
+var materialTabl = new THREE.MeshNormalMaterial();
+var mallaTabl= new THREE.Mesh( formaTabl, materialTabl );
 
 var escena = new THREE.Scene();
 escena.add(arbolMalla);
 escena.add(mallaT);
+escena.add(mallaTabl);
 
 var camara = new THREE.PerspectiveCamera();
 camara.position.z = 200;
