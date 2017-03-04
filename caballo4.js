@@ -14,10 +14,18 @@ figura.lineTo(-7, 15);
 figura.lineTo(-7, 5);
 figura.lineTo(10, 5);
 
+var base = new THREE.CylinderGeometry(20, 20, 5);
+base.translate(0,0,0);
+var mallabase = new THREE.Mesh(base);
 
 var forma = new THREE.ExtrudeGeometry( figura,{amount: 1});
 var material = new THREE.MeshNormalMaterial();
 var malla = new THREE.Mesh( forma, material );
+
+var arbolForma = new THREE.Geometry();
+arbolForma.merge(mallabase.geometry, mallabase.matrix);
+arbolForma.merge(malla.geometry, malla.matrix);
+
 var escena = new THREE.Scene();
 escena.add(malla);
 
