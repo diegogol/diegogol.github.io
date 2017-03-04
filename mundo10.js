@@ -23,7 +23,7 @@ arbolForma.merge(troncoMalla3.geometry, troncoMalla3.matrix);
 arbolForma.merge(troncoMalla4.geometry, troncoMalla4.matrix);
 
 var materialRey = new THREE.MeshNormalMaterial();
-arbolForma.translate(20,0,0);
+arbolForma.translate(0,0,0);
 var arbolMalla = new THREE.Mesh(arbolForma, materialRey);
 
 //torre
@@ -56,7 +56,7 @@ for (var i=0; i<76; i++) {
                 
 var formaT = new THREE.LatheGeometry(puntos);
 var materialT = new THREE.MeshNormalMaterial();
-formaT.translate(60,0,0);
+formaT.translate(60,-10,0);
 var mallaT = new THREE.Mesh( formaT, materialT);
 
 
