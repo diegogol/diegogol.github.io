@@ -109,7 +109,7 @@ escena.add(arbolMalla);
 escena.add(mallaT);
 escena.add(mallaTabl);
 escena.add(arbolmallacab);
-
+arbolForma.rotateY( Math.PI/4 );
 var camara = new THREE.PerspectiveCamera();
 camara.position.z = 350;
 
