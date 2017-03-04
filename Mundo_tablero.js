@@ -302,7 +302,7 @@ arbolFormaCa2.merge(mallabase2.geometry, mallabase2.matrix);
 arbolFormaCa2.merge(mallaCa2.geometry, mallaCa2.matrix);
 
 var materialCa2 = new THREE.MeshBasicMaterial( {color: 0x00ff00} );
-arbolFormaCa2.translate(90,0,-40);
+arbolFormaCa2.translate(110,0,-40);
 var arbolmallacab2 = new THREE.Mesh(arbolFormaCa2, materialCa2);
 
 //
