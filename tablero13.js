@@ -1,14 +1,14 @@
 var forma=new THREE.Geometry();
 
-forma.vertices.push(new THREE.Vector3(60,0,60));//0
-forma.vertices.push(new THREE.Vector3(60,0,-60));//1
-forma.vertices.push(new THREE.Vector3(-60,0,-60));//2
-forma.vertices.push(new THREE.Vector3(-60,0,60));//3
+forma.vertices.push(new THREE.Vector3(200,0,200));//0
+forma.vertices.push(new THREE.Vector3(200,0,-200));//1
+forma.vertices.push(new THREE.Vector3(-200,0,-200));//2
+forma.vertices.push(new THREE.Vector3(-200,0,200));//3
 
-forma.vertices.push(new THREE.Vector3(60,-5,60));//4
-forma.vertices.push(new THREE.Vector3(60,-5,-60));//5
-forma.vertices.push(new THREE.Vector3(-60,-5,-60));//6
-forma.vertices.push(new THREE.Vector3(-60,-5,60));//7
+forma.vertices.push(new THREE.Vector3(200,-5,200));//4
+forma.vertices.push(new THREE.Vector3(200,-5,-200));//5
+forma.vertices.push(new THREE.Vector3(-200,-5,-200));//6
+forma.vertices.push(new THREE.Vector3(-200,-5,200));//7
 
 forma.faces.push( new THREE.Face3( 0, 1, 3 ) ); // Cara 0
 forma.faces.push( new THREE.Face3( 1, 2, 3 ) ); // Cara 1
@@ -35,7 +35,7 @@ var escena = new THREE.Scene();
 escena.add( malla );
 
 var camara = new THREE.PerspectiveCamera();
-camara.position.z = 200;
+camara.position.z = 300;
 
 var renderizador = new THREE.WebGLRenderer();
 renderizador.setSize( window.innerHeight*.95, 
