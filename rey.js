@@ -1,6 +1,6 @@
 var troncoForma = new THREE.CylinderGeometry(8, 5, 15);
 var troncoForma2 = new THREE.CylinderGeometry(10, 10, 5);
-var troncoForma3= new THREE.CylinderGeometry(4, 8, 10);
+var troncoForma3= new THREE.CylinderGeometry(3, 6, 15);
 var troncoForma4= new THREE.CylinderGeometry(9, 5, 10);
 var esferaForma = new THREE.SphereGeometry(5);
 esferaForma.translate(0,10,0);
