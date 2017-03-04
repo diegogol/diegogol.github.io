@@ -26,8 +26,12 @@ var arbolForma = new THREE.Geometry();
 arbolForma.merge(mallabase.geometry, mallabase.matrix);
 arbolForma.merge(malla.geometry, malla.matrix);
 
+var materialCa= new THREE.MeshNormalMaterial();
+arbolForma.translate(0,0,0);
+var arbolMalla = new THREE.Mesh(arbolForma, materialCa);
+
 var escena = new THREE.Scene();
-escena.add(malla);
+escena.add(arbolMalla);
 
 var camara = new THREE.PerspectiveCamera();
 camara.position.z = 300;
