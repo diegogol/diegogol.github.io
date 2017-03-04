@@ -131,7 +131,7 @@ arbolForma2.merge(troncoMalla3.geometry, troncoMalla3.matrix);
 arbolForma2.merge(troncoMalla4.geometry, troncoMalla4.matrix);
 
 var materialRey2 = new THREE.MeshBasicMaterial( {color: 0x00ff00} );
-arbolForma2.translate(0,0,-20);
+arbolForma2.translate(0,0,-40);
 var arbolMalla2 = new THREE.Mesh(arbolForma2, materialRey2);
 
 //torre
@@ -147,7 +147,7 @@ for (var i=0; i<76; i++) {
 }              
 var formaT2 = new THREE.LatheGeometry(puntos2);
 var materialT2 = new THREE.MeshBasicMaterial( {color: 0x00ff00} );
-formaT2.translate(60,-10,-20);
+formaT2.translate(60,-10,-40);
 var mallaT2 = new THREE.Mesh( formaT2, materialT2);
 
 //Caballo
@@ -179,7 +179,7 @@ arbolFormaCa2.merge(mallabase2.geometry, mallabase2.matrix);
 arbolFormaCa2.merge(mallaCa2.geometry, mallaCa2.matrix);
 
 var materialCa2 = new THREE.MeshBasicMaterial( {color: 0x00ff00} );
-arbolFormaCa2.translate(90,0,0);
+arbolFormaCa2.translate(90,0,-40);
 var arbolmallacab2 = new THREE.Mesh(arbolFormaCa2, materialCa2);
 
 //
