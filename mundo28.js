@@ -22,7 +22,7 @@ arbolForma.merge(troncoMalla2.geometry, troncoMalla2.matrix);
 arbolForma.merge(troncoMalla3.geometry, troncoMalla3.matrix);
 arbolForma.merge(troncoMalla4.geometry, troncoMalla4.matrix);
 
-var materialRey = new THREE.MeshNormalMaterial();
+var materialRey = new THREE.MeshBasicMaterial( {color: 0xffff00} );
 arbolForma.translate(0,0,0);
 var arbolMalla = new THREE.Mesh(arbolForma, materialRey);
 
@@ -38,7 +38,7 @@ for (var i=0; i<76; i++) {
   if (i>75&&i<85){  puntos.push( new THREE.Vector2(85-i,0));}             
 }              
 var formaT = new THREE.LatheGeometry(puntos);
-var materialT = new THREE.MeshNormalMaterial();
+var materialT = new THREE.MeshBasicMaterial( {color: 0xffff00} );
 formaT.translate(60,-10,0);
 var mallaT = new THREE.Mesh( formaT, materialT);
 
@@ -69,7 +69,7 @@ formaTabl.faces.push( new THREE.Face3( 7, 4, 0 ) ); // Cara 10
 
 formaTabl.computeBoundingSphere();
 formaTabl.computeFaceNormals();
-var materialTabl = new THREE.MeshNormalMaterial();
+var materialTabl = new THREE.MeshBasicMaterial( {color: 0x993300} );
 var mallaTabl= new THREE.Mesh( formaTabl, materialTabl );
 
 //Caballo
@@ -100,7 +100,7 @@ var arbolFormaCa = new THREE.Geometry();
 arbolFormaCa.merge(mallabase.geometry, mallabase.matrix);
 arbolFormaCa.merge(mallaCa.geometry, mallaCa.matrix);
 
-var materialCa= new THREE.MeshNormalMaterial();
+var materialCa = new THREE.MeshBasicMaterial( {color: 0xffff00} );
 arbolFormaCa.translate(90,0,0);
 var arbolmallacab = new THREE.Mesh(arbolFormaCa, materialCa);
 
