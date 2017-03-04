@@ -71,14 +71,16 @@ formaTabl.computeBoundingSphere();
 formaTabl.computeFaceNormals();
 var materialTabl = new THREE.MeshNormalMaterial();
 var mallaTabl= new THREE.Mesh( formaTabl, materialTabl );
-
+arbolMalla.rotateX(Math.PI/6);
+mallaT.rotateX(Math.PI/6);
+mallaTabl.rotateX(Math.PI/6);
 var escena = new THREE.Scene();
 escena.add(arbolMalla);
 escena.add(mallaT);
 escena.add(mallaTabl);
 
 var camara = new THREE.PerspectiveCamera();
-camara.position.z = 300;
+camara.position.z = 400;
 
 renderizador = new THREE.WebGLRenderer();
 renderizador.setSize( window.innerHeight*.95, window.innerHeight*.95 );
