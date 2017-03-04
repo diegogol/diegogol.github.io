@@ -71,9 +71,7 @@ formaTabl.computeBoundingSphere();
 formaTabl.computeFaceNormals();
 var materialTabl = new THREE.MeshNormalMaterial();
 var mallaTabl= new THREE.Mesh( formaTabl, materialTabl );
-//arbolMalla.rotateX(Math.PI/6);
-//mallaT.rotateX(Math.PI/6);
-//mallaTabl.rotateX(Math.PI/6);
+
 var escena = new THREE.Scene();
 escena.add(arbolMalla);
 escena.add(mallaT);
