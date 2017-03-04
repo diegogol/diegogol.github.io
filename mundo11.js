@@ -29,29 +29,13 @@ var arbolMalla = new THREE.Mesh(arbolForma, materialRey);
 //torre
 var puntos = [];
 for (var i=0; i<76; i++) {
-  if (i<15){
-    puntos.push( new THREE.Vector2( i,40));    
-  }
-   if (i>15&&i<30){
-    puntos.push( new THREE.Vector2( 15,56-i));    
-  }
-
-   if (i>30&&i<40){
-    puntos.push( new THREE.Vector2( 45-i,25));    
-  }
-  if (i>40&&i<60){
-    puntos.push( new THREE.Vector2(-41+i,70-i));   
-                }
-  if (i>60&&i<65){
-    puntos.push( new THREE.Vector2(-41+i,10));    
-  }
-  if (i>65&&i<75){
-    puntos.push( new THREE.Vector2(24,76-i));    
-  }
-  
-  if (i>75&&i<85){
-    puntos.push( new THREE.Vector2(85-i,0));    
-  }             
+  if (i<15){  puntos.push( new THREE.Vector2( i,40));}
+  if (i>15&&i<30){  puntos.push( new THREE.Vector2( 15,56-i));}
+  if (i>30&&i<40){  puntos.push( new THREE.Vector2( 45-i,25));}
+  if (i>40&&i<60){  puntos.push( new THREE.Vector2(-41+i,70-i));}
+  if (i>60&&i<65){  puntos.push( new THREE.Vector2(-41+i,10));}
+  if (i>65&&i<75){  puntos.push( new THREE.Vector2(24,76-i));}
+  if (i>75&&i<85){  puntos.push( new THREE.Vector2(85-i,0));}             
 }              
 var formaT = new THREE.LatheGeometry(puntos);
 var materialT = new THREE.MeshNormalMaterial();
@@ -60,16 +44,14 @@ var mallaT = new THREE.Mesh( formaT, materialT);
 
 //tablero
 var formaTabl=new THREE.Geometry();
-
-formaTabl.vertices.push(new THREE.Vector3(60,0,60));//0
-formaTabl.vertices.push(new THREE.Vector3(60,0,-60));//1
-formaTabl.vertices.push(new THREE.Vector3(-60,0,-60));//2
-formaTabl.vertices.push(new THREE.Vector3(-60,0,60));//3
-
-formaTabl.vertices.push(new THREE.Vector3(60,-5,60));//4
-formaTabl.vertices.push(new THREE.Vector3(60,-5,-60));//5
-formaTabl.vertices.push(new THREE.Vector3(-60,-5,-60));//6
-formaTabl.vertices.push(new THREE.Vector3(-60,-5,60));//7
+formaTabl.vertices.push(new THREE.Vector3(60,-5,60));//0
+formaTabl.vertices.push(new THREE.Vector3(60,-5,-60));//1
+formaTabl.vertices.push(new THREE.Vector3(-60,-5,-60));//2
+formaTabl.vertices.push(new THREE.Vector3(-60,-5,60));//3
+formaTabl.vertices.push(new THREE.Vector3(60,-10,60));//4
+formaTabl.vertices.push(new THREE.Vector3(60,-10,-60));//5
+formaTabl.vertices.push(new THREE.Vector3(-60,-10,-60));//6
+formaTabl.vertices.push(new THREE.Vector3(-60,-10,60));//7
 
 formaTabl.faces.push( new THREE.Face3( 0, 1, 3 ) ); // Cara 0
 formaTabl.faces.push( new THREE.Face3( 1, 2, 3 ) ); // Cara 1
