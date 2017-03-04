@@ -19,8 +19,7 @@ base.translate(0,0,0);
 var mallabase = new THREE.Mesh(base);
 
 var forma = new THREE.ExtrudeGeometry( figura,{amount: 1});
-var material = new THREE.MeshNormalMaterial();
-var malla = new THREE.Mesh( forma, material );
+var malla = new THREE.Mesh(forma);
 
 var arbolForma = new THREE.Geometry();
 arbolForma.merge(mallabase.geometry, mallabase.matrix);
