@@ -1,4 +1,64 @@
 //bando 1 Amarillo
+//Alfil BANDO 1
+var puntos1 = [];
+for ( var j = 0; j <=22; j ++ ) {
+if(j<=6){    puntos1.push( new THREE.Vector2(j,10-j));}
+if(j==7){     puntos1.push( new THREE.Vector2(j-1,10-j));}
+if(j>7&&j<=11){    puntos1.push( new THREE.Vector2(14-j,10-j));}
+if(j>12&&j<=15){    puntos1.push( new THREE.Vector2(2,10-j));}
+if(j>15&&j<=17){    puntos1.push( new THREE.Vector2(j-13,10-j));}
+if(j>17){    puntos1.push( new THREE.Vector2(22-j,-8));}
+}
+var formaA2 = new THREE.LatheGeometry(puntos1);
+var materialA2 = new THREE.MeshBasicMaterial( {color: 0xffff00} );
+formaA2.translate(55,0,0);
+var mallaA2 = new THREE.Mesh( formaA2, materialA2);
+
+//Reina BANDO 1
+var rein2= new THREE.Shape();
+rein2.moveTo(0, 0);
+rein2.lineTo(0, 2);
+rein2.lineTo(2,2);
+rein2.lineTo(2, 15);
+rein2.lineTo(3, 11);
+rein2.lineTo(4, 12);
+rein2.lineTo(5, 11);
+rein2.lineTo(6, 16);
+rein2.lineTo(7, 11);
+rein2.lineTo(8, 12);
+rein2.lineTo(9, 11);
+rein2.lineTo(10,15);
+rein2.lineTo(10, 2);
+rein2.lineTo(12, 2);
+rein2.lineTo(12, 0);
+rein2.lineTo(0, 0);
+
+var formaR2= new THREE.ExtrudeGeometry( rein2,{amount: 1} );
+var materialR2= new THREE.MeshBasicMaterial( {color: 0xffff00} );
+formaR2.translate(30,-40,0);
+var mallaR2= new THREE.Mesh( formaR2,materialR2);
+
+//PEON BANDO 1
+var tronco1= new THREE.CylinderGeometry(4,4,20,4);
+var pico1= new THREE.ConeGeometry( 4,20,20);
+var esfera1= new THREE.SphereGeometry(5);
+pico1.translate(0,20,0);
+esfera1.translate(0,20,0);
+
+var troncoMalla1= new THREE.Mesh(tronco1);
+var picoMalla1= new THREE.Mesh(pico1);
+var esferaMalla1= new THREE.Mesh(esfera1);
+
+var peonForma1= new THREE.Geometry();
+
+peonForma1.merge(esferaMalla1.geometry, esferaMalla1.matrix);
+peonForma1.merge(troncoMalla1.geometry, troncoMalla1.matrix);
+peonForma1.merge(picoMalla1.geometry, picoMalla1.matrix);
+
+var materialP1= new THREE.MeshBasicMaterial( {color: 0xffff00} );
+peonForma1.translate(10,-40,0);
+var peonMalla1= new THREE.Mesh(peonForma1,materialP1);
+
 //Rey
 var troncoForma = new THREE.CylinderGeometry(18, 11, 24);
 var troncoForma2 = new THREE.CylinderGeometry(17, 17, 12);
@@ -191,6 +251,9 @@ escena.add(arbolMalla);
 escena.add(mallaT);
 escena.add(mallaTabl);
 escena.add(arbolmallacab);
+escena.add(mallaA2);
+escena.add(mallaR2);
+escena.add(peonMalla1);
 //bando 2 verde
 escena.add(arbolMalla2);
 escena.add(mallaT2);
@@ -200,6 +263,9 @@ arbolForma.rotateX( Math.PI/4 );
 formaT.rotateX( Math.PI/4 );
 formaTabl.rotateX( Math.PI/4 );
 arbolFormaCa.rotateX( Math.PI/4 );
+mallaA2.rotateX( Math.PI/4 );
+mallaR2.rotateX( Math.PI/4 );
+peonMalla1.rotateX( Math.PI/4 );
 //bando 2 verde
 arbolForma2.rotateX( Math.PI/4 );
 formaT2.rotateX( Math.PI/4 );
