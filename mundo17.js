@@ -80,7 +80,7 @@ escena.add(mallaT);
 escena.add(mallaTabl);
 
 var camara = new THREE.PerspectiveCamera();
-camara.position.z = 400;
+camara.position.z = 300;
 
 renderizador = new THREE.WebGLRenderer();
 renderizador.setSize( window.innerHeight*.95, window.innerHeight*.95 );
