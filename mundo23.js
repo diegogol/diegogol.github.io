@@ -101,7 +101,7 @@ arbolFormaCa.merge(mallabase.geometry, mallabase.matrix);
 arbolFormaCa.merge(mallaCa.geometry, mallaCa.matrix);
 
 var materialCa= new THREE.MeshNormalMaterial();
-arbolFormaCa.translate(80,0,0);
+arbolFormaCa.translate(100,0,0);
 var arbolmallacab = new THREE.Mesh(arbolFormaCa, materialCa);
 
 var escena = new THREE.Scene();
