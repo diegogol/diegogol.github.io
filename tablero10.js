@@ -20,7 +20,7 @@ forma.faces.push( new THREE.Face3( 6, 2, 1 ) ); // Cara 6
 forma.faces.push( new THREE.Face3( 1, 5, 6 ) ); // Cara 7
 forma.faces.push( new THREE.Face3( 2, 6, 7 ) ); // Cara 8
 forma.faces.push( new THREE.Face3( 2, 3, 7 ) ); // Cara 9
-forma.faces.push( new THREE.Face3( 7, 3, 0 ) ); // Cara 10
+forma.faces.push( new THREE.Face3( 0, 3, 7 ) ); // Cara 10
 forma.faces.push( new THREE.Face3( 0, 4, 7 ) ); // Cara 10
 
 forma.computeBoundingSphere();
@@ -29,7 +29,7 @@ forma.computeFaceNormals();
 var material = new THREE.MeshNormalMaterial();
 
 var malla = new THREE.Mesh( forma, material );
-//malla.rotateX(Math.PI/3);
+malla.rotateX(Math.PI/3);
 var escena = new THREE.Scene();
 escena.add( malla );
 
