@@ -1,9 +1,9 @@
 //Rey
-var troncoForma = new THREE.CylinderGeometry(18, 15, 25);
-var troncoForma2 = new THREE.CylinderGeometry(20, 20, 15);
-var troncoForma3= new THREE.CylinderGeometry(13, 16, 25);
-var troncoForma4= new THREE.CylinderGeometry(19, 15, 20);
-var esferaForma = new THREE.SphereGeometry(15);
+var troncoForma = new THREE.CylinderGeometry(15, 12, 22);
+var troncoForma2 = new THREE.CylinderGeometry(17, 17, 12);
+var troncoForma3= new THREE.CylinderGeometry(10, 13, 22);
+var troncoForma4= new THREE.CylinderGeometry(16, 12, 17);
+var esferaForma = new THREE.SphereGeometry(12);
 esferaForma.translate(0,70,0);
 troncoForma.translate(0,50,0);
 troncoForma2.translate(0,30,0);
