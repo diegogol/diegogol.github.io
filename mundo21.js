@@ -108,7 +108,7 @@ var escena = new THREE.Scene();
 escena.add(arbolMalla);
 escena.add(mallaT);
 escena.add(mallaTabl);
-escena.add(arbolmallaca);
+escena.add(arbolmallacab);
 
 var camara = new THREE.PerspectiveCamera();
 camara.position.z = 350;
