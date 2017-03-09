@@ -1,6 +1,5 @@
 
 var camara = new THREE.OrthographicCamera();
-var cubo=new Array(3);
 
 camara.left = window.innerWidth/-2;
 camara.right = window.innerWidth/2;
@@ -16,16 +15,11 @@ for (var i=0;i<3;i++)
 {
 var cubo= new THREE.Mesh( new THREE.BoxGeometry(10,10,10), new THREE.MeshNormalMaterial());
   cubo.position.x =20*i;
-
-}
-
 var escena = new THREE.Scene();
 
-escena.add(cubo[0]);
+escena.add(cubo);
+}
 
-escena.add(cubo[1]);
-
-escena.add(cubo[2]);
 
 var renderizador = new THREE.WebGLRenderer();
 renderizador.setSize(window.innerWidth, window.innerHeight);
