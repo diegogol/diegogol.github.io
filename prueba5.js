@@ -1,6 +1,6 @@
 
 var camara = new THREE.OrthographicCamera();
-var cubo=[];
+var cubo[3];
 
 camara.left = window.innerWidth/-2;
 camara.right = window.innerWidth/2;
