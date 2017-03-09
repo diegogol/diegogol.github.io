@@ -21,11 +21,11 @@ var cubo= new THREE.Mesh( new THREE.BoxGeometry(10,10,10), new THREE.MeshNormalM
 
 var escena = new THREE.Scene();
 
-escena.add(cubo(0));
+escena.add(cubo[0]);
 
-escena.add(cubo(1));
+escena.add(cubo[1]);
 
-escena.add(cubo(2));
+escena.add(cubo[2]);
 
 var renderizador = new THREE.WebGLRenderer();
 renderizador.setSize(window.innerWidth, window.innerHeight);
