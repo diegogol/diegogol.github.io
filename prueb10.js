@@ -14,8 +14,8 @@ camara.position.z = 30;
 
 for (var i=0;i<3;i++)
 {
-var cubo[i] = new THREE.Mesh( new THREE.BoxGeometry(10,10,10), new THREE.MeshNormalMaterial());
-  cubo[i].position.x =20*i;
+var cubo= new THREE.Mesh( new THREE.BoxGeometry(10,10,10), new THREE.MeshNormalMaterial());
+  cubo.position.x =20*i;
 
 }
 
