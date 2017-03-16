@@ -17,8 +17,8 @@ var cubo= new THREE.Mesh( new THREE.BoxGeometry(10,10,10), new THREE.MeshNormalM
   cubo.position.x =20*i;
 var escena = new THREE.Scene();
 
-escena.add(cubo);
 }
+escena.add(cubo);
 
 
 var renderizador = new THREE.WebGLRenderer();
