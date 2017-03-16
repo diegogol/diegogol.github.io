@@ -11,6 +11,7 @@ camara.updateProjectionMatrix();
 
 camara.position.z = 30;
 
+var cubo=new array[3];
 for (var i=0;i<3;i++)
 {
 var cubo= new THREE.Mesh( new THREE.BoxGeometry(10,10,10), new THREE.MeshNormalMaterial());
