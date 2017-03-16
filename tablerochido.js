@@ -11,16 +11,18 @@ camara.updateProjectionMatrix();
 
 camara.position.z = 30;
 
-var cubo=new array[3];
-for (var i=0;i<3;i++)
+var cubo;
+for (var =0;i<3;i++)
+{
+for (var j=0;j<3;j++)
 {
 var cubo= new THREE.Mesh( new THREE.BoxGeometry(10,10,10), new THREE.MeshNormalMaterial());
-  cubo.position.x =20*i;
-var escena = new THREE.Scene();
-
+  cubo.position.x =i;
+  cubo.position.z=j;
+  var escena = new THREE.Scene();
+  escena.add(cubo);
 }
-escena.add(cubo);
-
+}
 
 var renderizador = new THREE.WebGLRenderer();
 renderizador.setSize(window.innerWidth, window.innerHeight);
