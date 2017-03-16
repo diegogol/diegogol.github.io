@@ -12,7 +12,7 @@ camara.updateProjectionMatrix();
 camara.position.z = 30;
 
 var cubo;
-for (var =0;i<3;i++)
+for (var i=0;i<3;i++)
 {
 for (var j=0;j<3;j++)
 {
