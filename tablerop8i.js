@@ -12,16 +12,7 @@ camara.position.z = 30;
 //Tablero multicolor
 var escena = new THREE.Scene();
 var cubo;
-for (var i=0;i<8;i++)
-{
-for (var j=0;j<8;j++)
-{
-var cubo= new THREE.Mesh( new THREE.BoxGeometry(10,10,10));
-  cubo.position.x =j*10;
-  cubo.position.y=i*10;
-  escena.add(cubo);
-}
-}
+
 //CRUZ
 var puntos2 = [];
 for ( var i = 0; i <=9; i ++ ) {
@@ -68,6 +59,16 @@ reyForma.merge(baseMalla.geometry, baseMalla.matrix);
 
 var material = new THREE.MeshNormalMaterial();
 var reyMalla = new THREE.Mesh(reyForma, material);
+for (var i=0;i<8;i++)
+{
+for (var j=0;j<8;j++)
+{
+var cubo= new THREE.Mesh( new THREE.BoxGeometry(10,10,10));
+  cubo.position.x =j*10;
+  cubo.position.y=i*10;
+  escena.add(cubo);
+}
+}
 escena.add(reyMalla);
 
 //------------------------------------------------
