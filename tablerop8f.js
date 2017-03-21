@@ -1,9 +1,9 @@
 var camara = new THREE.OrthographicCamera();
 
-camara.left = window.innerWidth/-1;
-camara.right = window.innerWidth/1;
-camara.top = window.innerHeight/1;
-camara.bottom= window.innerHeight/-1;
+camara.left = window.innerWidth/-4;
+camara.right = window.innerWidth/4;
+camara.top = window.innerHeight/4;
+camara.bottom= window.innerHeight/-4;
 camara.near = 1;
 camara.far = 45;
 camara.updateProjectionMatrix();
