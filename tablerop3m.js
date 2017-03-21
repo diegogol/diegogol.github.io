@@ -16,7 +16,7 @@ for (var i=0;i<8;i++)
 {
 for (var j=0;j<8;j++)
 {
-var cubo= new THREE.Mesh( new THREE.BoxGeometry(10,4,-10));
+var cubo= new THREE.Mesh( new THREE.BoxGeometry(10,10,-10));
   cubo.position.x =j*10;
   cubo.position.z=-i*10;
   escena.add(cubo);
@@ -54,7 +54,7 @@ if(i<=6){     puntos1.push( new THREE.Vector2(i,0));}
 if(i==7){     puntos1.push( new THREE.Vector2(6,-2));}
 if(i==8){    puntos1.push( new THREE.Vector2(0,-2));}}
 var base = new THREE.LatheGeometry(puntos1);
-
+base.translate(0,10,0);
 //UNION
 var cruzMalla = new THREE.Mesh(cruz);
 var cuerpoMalla = new THREE.Mesh(cuerpo);
