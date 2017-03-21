@@ -58,7 +58,7 @@ var material = new THREE.MeshNormalMaterial();
 var reyMalla = new THREE.Mesh(reyForma, material);
 //Figura2
 //CRUZ2
-var reina = new THREE.Shape();
+/*var reina = new THREE.Shape();
 reina.moveTo(-1,16);
 reina.lineTo(1,16);
 reina.lineTo(1,18);
@@ -73,7 +73,7 @@ reina.lineTo(-3, 18);
 reina.lineTo(-1,18);
 reina.lineTo(-1, 16);
 var cruz2 = new THREE.ExtrudeGeometry( reina,{amount: 0.0} );
-
+*/
 //CUERPO2
 var puntos3 = [];
 for ( var i = 0; i <=9; i ++ ) {
@@ -96,13 +96,13 @@ if(i==8){    puntos4.push( new THREE.Vector2(0,-2));}}
 var base2 = new THREE.LatheGeometry(puntos4);
 
 //UNION
-var cruzMalla2 = new THREE.Mesh(cruz2);
+//var cruzMalla2 = new THREE.Mesh(cruz2);
 var cuerpoMalla2 = new THREE.Mesh(cuerpo2);
 var baseMalla2= new THREE.Mesh(base2);
 
 var reyForma2= new THREE.Geometry();
 
-reyForma2.merge(cruzMalla2.geometry, cruzMalla2.matrix);
+//reyForma2.merge(cruzMalla2.geometry, cruzMalla2.matrix);
 reyForma2.merge(cuerpoMalla2.geometry, cuerpoMalla2.matrix);
 reyForma2.merge(baseMalla2.geometry, baseMalla2.matrix);
 //reyForma2.translate(40,7,0);
