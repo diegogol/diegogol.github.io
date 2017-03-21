@@ -68,7 +68,6 @@ reyForma.merge(baseMalla.geometry, baseMalla.matrix);
 
 var material = new THREE.MeshNormalMaterial();
 var reyMalla = new THREE.Mesh(reyForma, material);
-var escena = new THREE.Scene();
 escena.add(reyMalla);
 
 //------------------------------------------------
