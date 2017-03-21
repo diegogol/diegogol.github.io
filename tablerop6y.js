@@ -8,7 +8,7 @@ camara.near = 1;
 camara.far = 45;
 camara.updateProjectionMatrix();
 
-camara.position.z = 45;
+camara.position.z = 30;
 var escena = new THREE.Scene();
 var cubo;
 for (var i=0;i<8;i++)
