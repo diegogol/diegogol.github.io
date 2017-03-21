@@ -5,7 +5,6 @@ var PlanoLejano     =110;
 
 var camara = new THREE.PerspectiveCamera( campoVision, relacionAspecto, PlanoCercano, PlanoLejano);
 camara.position.z=90;
-
 //Figura1
 //CRUZ
 var puntos2 = [];
