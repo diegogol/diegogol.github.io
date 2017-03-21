@@ -8,7 +8,7 @@ camara.near = 1;
 camara.far = 45;
 camara.updateProjectionMatrix();
 
-camara.position.z = 50;
+camara.position.z = 45;
 //Figura1
 //CRUZ
 var puntos2 = [];
