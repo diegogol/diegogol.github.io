@@ -4,7 +4,7 @@ var PlanoCercano    =1;
 var PlanoLejano     =100;
 
 var camara = new THREE.PerspectiveCamera( campoVision, relacionAspecto, PlanoCercano, PlanoLejano);
-camara.position.z=50;
+camara.position.z=100;
 
 //Figura1
 //CRUZ
