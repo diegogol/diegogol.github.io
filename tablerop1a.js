@@ -5,11 +5,11 @@ camara.left = window.innerWidth/-2;
 camara.right = window.innerWidth/2;
 camara.top = window.innerHeight/2;
 camara.bottom= window.innerHeight/-2;
-camara.near = 0.7;
-camara.far = 100;
+camara.near = 0.1;
+camara.far = 1000;
 camara.updateProjectionMatrix();
 
-camara.position.z = 30;
+camara.position.z = 10;
 var escena = new THREE.Scene();
 var cubo;
 for (var i=0;i<8;i++)
@@ -17,8 +17,8 @@ for (var i=0;i<8;i++)
 for (var j=0;j<8;j++)
 {
 var cubo= new THREE.Mesh( new THREE.BoxGeometry(10,10,10));
-  cubo.position.x =i*8;
-  cubo.position.z=j*8;
+  cubo.position.x =i*10;
+  cubo.position.z=j*10;
   escena.add(cubo);
 }
 }
