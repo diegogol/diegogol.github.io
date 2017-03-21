@@ -5,10 +5,10 @@ camara.right = window.innerWidth/3;
 camara.top = window.innerHeight/3;
 camara.bottom= window.innerHeight/-3;
 camara.near = 1;
-camara.far = 40;
+camara.far = 45;
 camara.updateProjectionMatrix();
 
-camara.position.z = 50;
+camara.position.z = 45;
 var escena = new THREE.Scene();
 var cubo;
 for (var i=0;i<8;i++)
