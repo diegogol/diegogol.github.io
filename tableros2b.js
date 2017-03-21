@@ -8,7 +8,7 @@ camara.near = 1;
 camara.far = 45;
 camara.updateProjectionMatrix();
 
-camara.position.z = 30;
+camara.position.z = 50;
 //Tablero multicolor
 var escena = new THREE.Scene();
 var cubo;
@@ -22,6 +22,7 @@ var cubo= new THREE.Mesh( new THREE.BoxGeometry(10,10,-10));
   escena.add(cubo);
 }
 }
+//Figura1
 //CRUZ
 var puntos2 = [];
 for ( var i = 0; i <=9; i ++ ) {
@@ -64,11 +65,67 @@ var reyForma= new THREE.Geometry();
 reyForma.merge(cruzMalla.geometry, cruzMalla.matrix);
 reyForma.merge(cuerpoMalla.geometry, cuerpoMalla.matrix);
 reyForma.merge(baseMalla.geometry, baseMalla.matrix);
-reyForma.translate(0,10,0);
+reyForma.translate(0,7,0);
 
 var material = new THREE.MeshNormalMaterial();
 var reyMalla = new THREE.Mesh(reyForma, material);
 escena.add(reyMalla);
+//Figura2
+//CRUZ2
+var reina = new THREE.Shape();
+reina.moveTo(-1,16);
+reina.lineTo(1,16);
+reina.lineTo(1,18);
+reina.lineTo(3, 18);
+reina.lineTo(3, 20);
+reina.lineTo(1, 20);
+reina.lineTo(1, 22);
+reina.lineTo(-1, 22);
+reina.lineTo(-1,20);
+reina.lineTo(-3, 20);
+reina.lineTo(-3, 18);
+reina.lineTo(-1,18);
+reina.lineTo(-1, 16);
+var cruz2 = new THREE.ExtrudeGeometry( reina,
+                                       {amount: 0.0} );
+//CUERPO2
+var puntos2 = [];
+for ( var i = 0; i <=9; i ++ ) {
+if(i<=4){     puntos2.push( new THREE.Vector2(i,16));}
+if(i==5){     puntos2.push( new THREE.Vector2(2,11));}
+if(i==6){     puntos2.push( new THREE.Vector2(4,9));}
+if(i==7){     puntos2.push( new THREE.Vector2(4,8));}
+if(i==8){    puntos2.push( new THREE.Vector2(2,8));}
+if(i==9){     puntos2.push( new THREE.Vector2(4,0));}
+    if(i==10){    puntos2.push( new THREE.Vector2(0,0));}}
+
+var cuerpo2 = new THREE.LatheGeometry(puntos2);
+
+//BASE2
+
+var puntos3 = [];
+for ( var i = 0; i <=22; i ++ ) {
+if(i<=6){     puntos3.push( new THREE.Vector2(i,0));}
+if(i==7){     puntos3.push( new THREE.Vector2(6,-2));}
+if(i==8){    puntos3.push( new THREE.Vector2(0,-2));}}
+
+var base2 = new THREE.LatheGeometry(puntos3);
+
+//UNION
+var cruzMalla2 = new THREE.Mesh(cruz2);
+var cuerpoMalla2 = new THREE.Mesh(cuerpo2);
+var baseMalla2= new THREE.Mesh(base2);
+
+var reyForma2= new THREE.Geometry();
+
+reyForma2.merge(cruzMalla2.geometry, cruzMalla2.matrix);
+reyForma2.merge(cuerpoMalla2.geometry, cuerpoMalla2.matrix);
+reyForma2.merge(baseMalla2.geometry, baseMalla2.matrix);
+reyForma.translate(40,7,0);
+
+var material2 = new THREE.MeshNormalMaterial();
+var reyMalla2 = new THREE.Mesh(reyForma2, material2);
+escena.add(reyMalla2);
 
 //------------------------------------------------
 var renderizador = new THREE.WebGLRenderer();
