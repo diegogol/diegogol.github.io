@@ -54,7 +54,7 @@ if(i<=6){     puntos1.push( new THREE.Vector2(i,0));}
 if(i==7){     puntos1.push( new THREE.Vector2(6,-2));}
 if(i==8){    puntos1.push( new THREE.Vector2(0,-2));}}
 var base = new THREE.LatheGeometry(puntos1);
-base.translate(0,8,0);
+base.translate(0,7,0);
 //UNION
 var cruzMalla = new THREE.Mesh(cruz);
 var cuerpoMalla = new THREE.Mesh(cuerpo);
