@@ -10,6 +10,7 @@ camara.updateProjectionMatrix();
 
 camara.position.z = 45;
 //Figura1
+
 //CRUZ
 var puntos2 = [];
 for ( var i = 0; i <=9; i ++ ) {
