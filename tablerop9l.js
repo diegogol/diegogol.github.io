@@ -16,7 +16,7 @@ for (var i=0;i<8;i++)
 {
 for (var j=0;j<8;j++)
 {
-var cubo= new THREE.Mesh( new THREE.BoxGeometry(10,10,-10));
+var cubo= new THREE.Mesh( new THREE.BoxGeometry(10,-10,10));
   cubo.position.x =j*10;
   cubo.position.z=i*10;
   escena.add(cubo);
