@@ -9,19 +9,6 @@ camara.far = 45;
 camara.updateProjectionMatrix();
 
 camara.position.z = 50;
-//Tablero multicolor
-var escena = new THREE.Scene();
-var cubo;
-for (var i=0;i<8;i++)
-{
-for (var j=0;j<8;j++)
-{
-var cubo= new THREE.Mesh( new THREE.BoxGeometry(10,10,-10));
-  cubo.position.x =j*10;
-  cubo.position.z=-i*10;
-  escena.add(cubo);
-}
-}
 //Figura1
 //CRUZ
 var puntos2 = [];
@@ -69,7 +56,6 @@ reyForma.translate(0,7,0);
 
 var material = new THREE.MeshNormalMaterial();
 var reyMalla = new THREE.Mesh(reyForma, material);
-escena.add(reyMalla);
 //Figura2
 //CRUZ2
 var reina = new THREE.Shape();
@@ -124,8 +110,22 @@ reyForma2.translate(40,7,0);
 
 var material2 = new THREE.MeshNormalMaterial();
 var reyMalla2 = new THREE.Mesh(reyForma2, material2);
-escena.add(reyMalla2);
 
+var escena = new THREE.Scene();
+//Tablero multicolor
+var cubo;
+for (var i=0;i<8;i++)
+{
+for (var j=0;j<8;j++)
+{
+var cubo= new THREE.Mesh( new THREE.BoxGeometry(10,10,-10));
+  cubo.position.x =j*10;
+  cubo.position.z=-i*10;
+  escena.add(cubo);
+}
+}
+escena.add(reyMalla);
+escena.add(reyMalla2);
 //------------------------------------------------
 var renderizador = new THREE.WebGLRenderer();
 renderizador.setSize(window.innerWidth, window.innerHeight);
