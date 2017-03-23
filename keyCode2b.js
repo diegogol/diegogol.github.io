@@ -1,10 +1,8 @@
 function pushar(e){
 if(e.keyCode ===65){
-  camara.position.z++;   
-else if (e.keyCode===90)
-  camara.position.z--;
-}
-  
+  camara.position.z++;}   
+else if (e.keyCode===90){
+  camara.position.z--;}
 }
 function setup(){
 var listener=function(){  
