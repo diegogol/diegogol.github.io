@@ -11,7 +11,7 @@ escena.add(iluminacion);
 var camara = new THREE.PerspectiveCamera();
 camara.position.z = 5;
 
-var lienzo = document.getELementById("luzAmbiental");
+//var lienzo = document.getELementById("luzAmbiental");
 //var renderizador = new THREE.WebGLRenderer({canvas: lienzo,
                                             //antialias: true});
 var renderizador = new THREE.WebGLRenderer();                                       
