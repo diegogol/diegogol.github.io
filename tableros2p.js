@@ -9,6 +9,15 @@ camara.far = 100;
 camara.updateProjectionMatrix();
 
 camara.position.z = 45;
+
+cubo1= new THREE.Mesh(new THREE.BoxGeometry(1,2,1),
+                      new THREE.MeshNormalMaterial());
+                      
+cubo2= new THREE.Mesh(new THREE.BoxGeometry(1,2,1),
+                      new THREE.MeshNormalMaterial());
+                         
+cubo1.position.x= 0;
+cubo2.position.x= 70;
 //Figura1
 
 //CRUZ
