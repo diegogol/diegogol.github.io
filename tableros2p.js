@@ -18,6 +18,8 @@ cubo2= new THREE.Mesh(new THREE.BoxGeometry(10,10,10),
                          
 cubo1.position.x= 0;
 cubo2.position.x= 70;
+cubo1.position.z= 7;
+cubo2.position.z= 7;
 //Figura1
 
 //CRUZ
