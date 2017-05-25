@@ -136,6 +136,8 @@ var cubo= new THREE.Mesh( new THREE.BoxGeometry(10,10,-10));
 }
 escena.add(reyMalla);
 escena.add(reyMalla2);
+escena.add(cubo1);
+escena.add(cubo2);
 //------------------------------------------------
 var renderizador = new THREE.WebGLRenderer();
 renderizador.setSize(window.innerWidth, window.innerHeight);
