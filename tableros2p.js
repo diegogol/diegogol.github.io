@@ -10,10 +10,10 @@ camara.updateProjectionMatrix();
 
 camara.position.z = 45;
 
-cubo1= new THREE.Mesh(new THREE.BoxGeometry(1,2,1),
+cubo1= new THREE.Mesh(new THREE.BoxGeometry(10,10,10),
                       new THREE.MeshNormalMaterial());
                       
-cubo2= new THREE.Mesh(new THREE.BoxGeometry(1,2,1),
+cubo2= new THREE.Mesh(new THREE.BoxGeometry(10,10,10),
                       new THREE.MeshNormalMaterial());
                          
 cubo1.position.x= 0;
