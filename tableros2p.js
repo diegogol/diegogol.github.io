@@ -107,7 +107,7 @@ var reyForma2= new THREE.Geometry();
 reyForma2.merge(cruzMalla2.geometry, cruzMalla2.matrix);
 reyForma2.merge(cuerpoMalla2.geometry, cuerpoMalla2.matrix);
 reyForma2.merge(baseMalla2.geometry, baseMalla2.matrix);
-reyForma2.translate(80,7,0);
+reyForma2.translate(60,7,0);
 
 var material2 = new THREE.MeshNormalMaterial();
 var reyMalla2 = new THREE.Mesh(reyForma2, material2);
