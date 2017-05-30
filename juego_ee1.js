@@ -129,7 +129,7 @@ escena.add(reyMalla2);
 escena.add(cubo1);
 escena.add(cubo2);
 //------------------------------------------------
-var campoVision     =10;//grados
+var campoVision     =45;//grados
 var relacionAspecto =window.innerWidth/window.innerHeight;
 var PlanoCercano    =10;
 var PlanoLejano     =1000;
