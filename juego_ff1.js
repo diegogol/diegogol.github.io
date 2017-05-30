@@ -1,3 +1,5 @@
+void setup()
+{
 cubo1= new THREE.Mesh(new THREE.BoxGeometry(5,5,10),
                       new THREE.MeshNormalMaterial());
                       
@@ -139,8 +141,34 @@ camara.position.x=50;
 camara.position.y=30;
 camara.position.z=110;
 
+raycaster1= new THREE.Raycaster(reyMalla.positioin, new THREE.Vector3(1,0,0));
+raycaster2= new THREE.Raycaster(reyMalla.positioin, new THREE.Vector3(-1,0,0));
+
 var renderizador = new THREE.WebGLRenderer();
 renderizador.setSize(window.innerWidth, window.innerHeight);
 
 document.body.appendChild(renderizador.domElement);
 renderizador.render(escena, camara);
+step=0.03;
+}
+function loop(){
+obstaculo1= raycaster1.intersectObject(cubo1);
+obstaculo2= raycaster2.intersectObject(cubo2);
+
+if ((obstaculo1.length>0 && (obstaculo1[0].distance<=0.5))|| 
+    (obstaculo2.length>0 && (obstaculo2[0].distance<=1)))
+step=-step;
+
+reyMalla.position.x +=step;
+raycaster1.set(reyMalla.position, new THREE.Vector3(1,0,0));
+raycaster2.set(reyMalla.position, new THREE.Vector3(-1,0,0));
+
+renderer.render(escena,camara);
+requestAnimationFrame(loop);
+}
+
+var cubo1, cubo2,cubo, escena, camara, renderer,reyMalla,reyMalla2;
+var raycaster1,step,raycaster2;
+var obstaculo1, obstaculo2;
+setup();
+loop()
