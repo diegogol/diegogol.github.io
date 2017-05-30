@@ -132,10 +132,10 @@ escena.add(cubo2);
 var campoVision     =45;//grados
 var relacionAspecto =window.innerWidth/window.innerHeight;
 var PlanoCercano    =1;
-var PlanoLejano     =1000;
+var PlanoLejano     =100;
 
 var camara = new THREE.PerspectiveCamera( campoVision, relacionAspecto, PlanoCercano, PlanoLejano);
-camara.position.z=50;
+camara.position.z=100;
 
 var renderizador = new THREE.WebGLRenderer();
 renderizador.setSize(window.innerWidth, window.innerHeight);
