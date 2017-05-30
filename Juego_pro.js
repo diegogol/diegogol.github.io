@@ -1,14 +1,5 @@
-var camara = new THREE.OrthographicCamera();
-
-camara.left = window.innerWidth/-5;
-camara.right = window.innerWidth/5;
-camara.top = window.innerHeight/3;
-camara.bottom= window.innerHeight/-5;
-camara.near = .1;
-camara.far = 100;
-camara.updateProjectionMatrix();
-
-camara.position.z = 45;
+var camara = new THREE.PerspectiveCamera();
+camara.position.z = 350;
 
 cubo1= new THREE.Mesh(new THREE.BoxGeometry(10,10,10),
                       new THREE.MeshNormalMaterial());
