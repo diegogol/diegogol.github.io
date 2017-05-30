@@ -1,4 +1,4 @@
-void setup()
+function setup()
 {
 cubo1= new THREE.Mesh(new THREE.BoxGeometry(5,5,10),
                       new THREE.MeshNormalMaterial());
