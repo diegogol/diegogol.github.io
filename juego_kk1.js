@@ -131,7 +131,7 @@ escena.add(cubo2);
 //------------------------------------------------
 var campoVision     =30;//grados
 var relacionAspecto =window.innerWidth/window.innerHeight;
-var PlanoCercano    =10;
+var PlanoCercano    =1;
 var PlanoLejano     =100;
 
 var camara = new THREE.PerspectiveCamera( campoVision, relacionAspecto, PlanoCercano, PlanoLejano);
