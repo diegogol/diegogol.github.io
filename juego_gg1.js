@@ -129,13 +129,13 @@ escena.add(reyMalla2);
 escena.add(cubo1);
 escena.add(cubo2);
 //------------------------------------------------
-var campoVision     =45;//grados
+var campoVision     =60;//grados
 var relacionAspecto =window.innerWidth/window.innerHeight;
-var PlanoCercano    =10;
-var PlanoLejano     =1000;
+var PlanoCercano    =1;
+var PlanoLejano     =100;
 
 var camara = new THREE.PerspectiveCamera( campoVision, relacionAspecto, PlanoCercano, PlanoLejano);
-camara.position.y=10;
+camara.position.z=90;
 
 var renderizador = new THREE.WebGLRenderer();
 renderizador.setSize(window.innerWidth, window.innerHeight);
