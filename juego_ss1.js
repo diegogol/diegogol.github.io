@@ -1,13 +1,13 @@
-cubo1= new THREE.Mesh(new THREE.BoxGeometry(10,10,-10),
+cubo1= new THREE.Mesh(new THREE.BoxGeometry(5,5,10),
                       new THREE.MeshNormalMaterial());
                       
-cubo2= new THREE.Mesh(new THREE.BoxGeometry(10,10,-10),
+cubo2= new THREE.Mesh(new THREE.BoxGeometry(5,5,10),
                       new THREE.MeshNormalMaterial());
                          
 cubo1.position.x= 0;
 cubo2.position.x= 70;
-cubo1.position.z= 20;
-cubo2.position.z= 20;
+cubo1.position.y=7;
+cubo2.position.y=7;
 //Figura1
 
 //CRUZ
@@ -137,7 +137,7 @@ var PlanoLejano     =1000;
 var camara = new THREE.PerspectiveCamera( campoVision, relacionAspecto, PlanoCercano, PlanoLejano);
 camara.position.x=50;
 camara.position.y=30;
-camara.position.z=90;
+camara.position.z=110;
 
 var renderizador = new THREE.WebGLRenderer();
 renderizador.setSize(window.innerWidth, window.innerHeight);
