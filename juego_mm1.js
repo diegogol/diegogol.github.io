@@ -112,7 +112,7 @@ reyForma2.translate(60,7,-20);
 
 var material2 = new THREE.MeshNormalMaterial();
 var reyMalla2 = new THREE.Mesh(reyForma2, material2);
-
+  
 var escena = new THREE.Scene();
 //Tablero multicolor
 var cubo;
@@ -126,10 +126,7 @@ var cubo= new THREE.Mesh( new THREE.BoxGeometry(10,10,-10));
   escena.add(cubo);
 }
 }
-escena.add(reyMalla);
-escena.add(reyMalla2);
-escena.add(cubo1);
-escena.add(cubo2);
+
 //------------------------------------------------
 var campoVision     =45;//grados
 var relacionAspecto =window.innerWidth/window.innerHeight;
@@ -141,6 +138,11 @@ camara.position.x=50;
 camara.position.y=30;
 camara.position.z=110;
 
+escena.add(reyMalla);
+escena.add(reyMalla2);
+escena.add(cubo1);
+escena.add(cubo2);
+  
 raycaster1= new THREE.Raycaster(reyMalla.positioin, new THREE.Vector3(1,0,0));
 raycaster2= new THREE.Raycaster(reyMalla.positioin, new THREE.Vector3(-1,0,0));
 
