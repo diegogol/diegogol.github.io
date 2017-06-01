@@ -149,6 +149,7 @@ escena.add(reyMalla);
 escena.add(reyMalla2);
 escena.add(cubo1);
 escena.add(cubo2);
+  escena.add(camara);
   
 
 var renderizador = new THREE.WebGLRenderer();
