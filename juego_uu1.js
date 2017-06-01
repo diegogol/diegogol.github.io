@@ -55,12 +55,12 @@ reyForma.merge(cruzMalla.geometry, cruzMalla.matrix);
 reyForma.merge(cuerpoMalla.geometry, cuerpoMalla.matrix);
 reyForma.merge(baseMalla.geometry, baseMalla.matrix);
 reyForma.translate(0,7,0);
-reyForma.scale.x =.5;
-  reyForma.scale.y =.5;
-  reyForma.scale.z =.5;
   
 var material = new THREE.MeshNormalMaterial();
 var reyMalla = new THREE.Mesh(reyForma, material);
+  reyMalla.scale.x =.5;
+  reyMalla.scale.y =.5;
+  reyMalla.scale.z =.5;
 
 //Figura2
 //CRUZ2
@@ -156,14 +156,14 @@ renderizador.setSize(window.innerWidth, window.innerHeight);
 
 document.body.appendChild(renderizador.domElement);
 renderizador.render(escena, camara);
-step=0.03;
+step=0.05;
 }
 function loop(){
 obstaculo1= raycaster1.intersectObject(cubo1);
 obstaculo2= raycaster2.intersectObject(cubo2);
 
 if ((obstaculo1.length>0 && (obstaculo1[0].distance<=0.5))|| 
-    (obstaculo2.length>0 && (obstaculo2[0].distance<=1)))
+    (obstaculo2.length>0 && (obstaculo2[0].distance<=0.5)))
 step=-step;
 
 reyMalla.position.x +=step;
