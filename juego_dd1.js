@@ -5,7 +5,8 @@ cubo1= new THREE.Mesh(new THREE.BoxGeometry(5,5,10),
                       
 cubo2= new THREE.Mesh(new THREE.BoxGeometry(5,5,10),
                       new THREE.MeshNormalMaterial());
-                         
+                   pelota= new THREE.Mesh(new THREE.SphereGeometry(0.5),
+                      new THREE.MeshNormalMaterial());        
 cubo1.position.x= 7;
 cubo2.position.x= -7;
 cubo1.position.y=7;
@@ -54,7 +55,7 @@ var reyForma= new THREE.Geometry();
 reyForma.merge(cruzMalla.geometry, cruzMalla.matrix);
 reyForma.merge(cuerpoMalla.geometry, cuerpoMalla.matrix);
 reyForma.merge(baseMalla.geometry, baseMalla.matrix);
-reyForma.translate(0,7,0);
+reyForma.translate(20,7,0);
   
 var material = new THREE.MeshNormalMaterial();
 var reyMalla = new THREE.Mesh(reyForma, material);
@@ -126,8 +127,8 @@ camara.position.x=50;
 camara.position.y=30;
 camara.position.z=110;
   
-raycaster1= new THREE.Raycaster(reyMalla.positioin, new THREE.Vector3(1,0,0));
-raycaster2= new THREE.Raycaster(reyMalla.positioin, new THREE.Vector3(-1,0,0));
+raycaster1= new THREE.Raycaster(pelota.positioin, new THREE.Vector3(1,0,0));
+raycaster2= new THREE.Raycaster(pelota.positioin, new THREE.Vector3(-1,0,0));
   
 var escena = new THREE.Scene();
 //Tablero multicolor
@@ -149,6 +150,7 @@ escena.add(reyMalla);
 escena.add(reyMalla2);
 escena.add(cubo1);
 escena.add(cubo2);
+escena.add(pelota);
   escena.add(camara);
   
 
@@ -167,15 +169,15 @@ if ((obstaculo1.length>0 && (obstaculo1[0].distance<=0.5))||
     (obstaculo2.length>0 && (obstaculo2[0].distance<=0.5)))
 step=-step;
 
-reyMalla.position.x +=step;
-raycaster1.set(reyMalla.position, new THREE.Vector3(1,0,0));
-raycaster2.set(reyMalla.position, new THREE.Vector3(-1,0,0));
+pelotaa.position.x +=step;
+raycaster1.set(pelota.position, new THREE.Vector3(1,0,0));
+raycaster2.set(pelota.position, new THREE.Vector3(-1,0,0));
 
 renderer.render(escena,camara);
 requestAnimationFrame(loop);
 }
 
-var cubo1, cubo2,cubo, escena, camara, renderer,reyMalla,reyMalla2;
+var cubo1, cubo2,cubo, escena, camara, renderer,pelota,reyMalla,reyMalla2;
 var raycaster1,step,raycaster2;
 var obstaculo1, obstaculo2;
 setup();
