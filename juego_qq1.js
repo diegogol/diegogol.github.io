@@ -113,6 +113,19 @@ reyForma2.translate(60,7,-20);
 var material2 = new THREE.MeshNormalMaterial();
 var reyMalla2 = new THREE.Mesh(reyForma2, material2);
   
+var campoVision     =45;//grados
+var relacionAspecto =window.innerWidth/window.innerHeight;
+var PlanoCercano    =1;
+var PlanoLejano     =1000;
+
+var camara = new THREE.PerspectiveCamera( campoVision, relacionAspecto, PlanoCercano, PlanoLejano);
+camara.position.x=50;
+camara.position.y=30;
+camara.position.z=110;
+  
+raycaster1= new THREE.Raycaster(reyMalla.positioin, new THREE.Vector3(1,0,0));
+raycaster2= new THREE.Raycaster(reyMalla.positioin, new THREE.Vector3(-1,0,0));
+  
 var escena = new THREE.Scene();
 //Tablero multicolor
 var cubo;
@@ -128,23 +141,12 @@ var cubo= new THREE.Mesh( new THREE.BoxGeometry(10,10,-10));
 }
 
 //------------------------------------------------
-var campoVision     =45;//grados
-var relacionAspecto =window.innerWidth/window.innerHeight;
-var PlanoCercano    =1;
-var PlanoLejano     =1000;
-
-var camara = new THREE.PerspectiveCamera( campoVision, relacionAspecto, PlanoCercano, PlanoLejano);
-camara.position.x=50;
-camara.position.y=30;
-camara.position.z=110;
 
 escena.add(reyMalla);
 escena.add(reyMalla2);
 escena.add(cubo1);
 escena.add(cubo2);
   
-raycaster1= new THREE.Raycaster(reyForma.positioin, new THREE.Vector3(1,0,0));
-raycaster2= new THREE.Raycaster(reyForma.positioin, new THREE.Vector3(-1,0,0));
 
 var renderizador = new THREE.WebGLRenderer();
 renderizador.setSize(window.innerWidth, window.innerHeight);
@@ -161,15 +163,15 @@ if ((obstaculo1.length>0 && (obstaculo1[0].distance<=0.5))||
     (obstaculo2.length>0 && (obstaculo2[0].distance<=1)))
 step=-step;
 
-reyForma.position.x +=step;
-raycaster1.set(reyForma.position, new THREE.Vector3(1,0,0));
-raycaster2.set(reyForma.position, new THREE.Vector3(-1,0,0));
+reyMalla.position.x +=step;
+raycaster1.set(reyMalla.position, new THREE.Vector3(1,0,0));
+raycaster2.set(reyMalla.position, new THREE.Vector3(-1,0,0));
 
 renderer.render(escena,camara);
 requestAnimationFrame(loop);
 }
 
-var cubo1, cubo2,cubo, escena, camara, renderer,reyMalla,reyForma,reyMalla2;
+var cubo1, cubo2,cubo, escena, camara, renderer,reyMalla,reyMalla2;
 var raycaster1,step,raycaster2;
 var obstaculo1, obstaculo2;
 setup();
