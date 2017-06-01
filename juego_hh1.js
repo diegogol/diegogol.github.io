@@ -143,8 +143,8 @@ escena.add(reyMalla2);
 escena.add(cubo1);
 escena.add(cubo2);
   
-raycaster1= new THREE.Raycaster(reyMalla.positioin, new THREE.Vector3(1,0,0));
-raycaster2= new THREE.Raycaster(reyMalla.positioin, new THREE.Vector3(-1,0,0));
+raycaster1= new THREE.Raycaster(reyForma.positioin, new THREE.Vector3(1,0,0));
+raycaster2= new THREE.Raycaster(reyForma.positioin, new THREE.Vector3(-1,0,0));
 
 var renderizador = new THREE.WebGLRenderer();
 renderizador.setSize(window.innerWidth, window.innerHeight);
@@ -161,9 +161,9 @@ if ((obstaculo1.length>0 && (obstaculo1[0].distance<=0.5))||
     (obstaculo2.length>0 && (obstaculo2[0].distance<=1)))
 step=-step;
 
-reyMalla.position.x +=step;
-raycaster1.set(reyMalla.position, new THREE.Vector3(1,0,0));
-raycaster2.set(reyMalla.position, new THREE.Vector3(-1,0,0));
+reyForma.position.x +=step;
+raycaster1.set(reyForma.position, new THREE.Vector3(1,0,0));
+raycaster2.set(reyForma.position, new THREE.Vector3(-1,0,0));
 
 renderer.render(escena,camara);
 requestAnimationFrame(loop);
@@ -173,4 +173,4 @@ var cubo1, cubo2,cubo, escena, camara, renderer,reyMalla,reyMalla2;
 var raycaster1,step,raycaster2;
 var obstaculo1, obstaculo2;
 setup();
-loop()
+loop();
