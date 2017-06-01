@@ -6,8 +6,8 @@ cubo1= new THREE.Mesh(new THREE.BoxGeometry(5,5,10),
 cubo2= new THREE.Mesh(new THREE.BoxGeometry(5,5,10),
                       new THREE.MeshNormalMaterial());
                          
-cubo1.position.x= 0;
-cubo2.position.x= 70;
+cubo1.position.x= 7;
+cubo2.position.x= -7;
 cubo1.position.y=7;
 cubo2.position.y=7;
 //Figura1
@@ -54,7 +54,7 @@ var reyForma= new THREE.Geometry();
 reyForma.merge(cruzMalla.geometry, cruzMalla.matrix);
 reyForma.merge(cuerpoMalla.geometry, cuerpoMalla.matrix);
 reyForma.merge(baseMalla.geometry, baseMalla.matrix);
-reyForma.translate(10,7,0);
+reyForma.translate(0,7,0);
 
 var material = new THREE.MeshNormalMaterial();
 var reyMalla = new THREE.Mesh(reyForma, material);
@@ -156,8 +156,8 @@ renderizador.render(escena, camara);
 step=0.03;
 }
 function loop(){
-obstaculo1= raycaster1.intersectObject(cubo2);
-obstaculo2= raycaster2.intersectObject(cubo1);
+obstaculo1= raycaster1.intersectObject(cubo1);
+obstaculo2= raycaster2.intersectObject(cubo2);
 
 if ((obstaculo1.length>0 && (obstaculo1[0].distance<=0.5))|| 
     (obstaculo2.length>0 && (obstaculo2[0].distance<=1)))
