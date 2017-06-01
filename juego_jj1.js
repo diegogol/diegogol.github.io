@@ -178,7 +178,8 @@ renderer.render(escena,camara);
 requestAnimationFrame(loop);
 }
 
-var cubo1, cubo2,cubo, escena, camara, renderer,pelota,reyMalla,reyMalla2;
+var cubo1, cubo2,cubo, escena, camara;
+var renderer,pelota,reyMalla,reyMalla2;
 var raycaster1,step,raycaster2;
 var obstaculo1, obstaculo2;
 setup();
