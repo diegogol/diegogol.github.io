@@ -123,7 +123,7 @@ var relacionAspecto =window.innerWidth/window.innerHeight;
 var PlanoCercano    =1;
 var PlanoLejano     =1000;
 
-var camara = new THREE.PerspectiveCamera( campoVision, relacionAspecto, PlanoCercano, PlanoLejano);
+camara = new THREE.PerspectiveCamera( campoVision, relacionAspecto, PlanoCercano, PlanoLejano);
 camara.position.x=50;
 camara.position.y=30;
 camara.position.z=110;
@@ -131,14 +131,13 @@ camara.position.z=110;
 raycaster1= new THREE.Raycaster(pelota.positioin, new THREE.Vector3(1,0,0));
 raycaster2= new THREE.Raycaster(pelota.positioin, new THREE.Vector3(-1,0,0));
   
-var escena = new THREE.Scene();
+escena = new THREE.Scene();
 //Tablero multicolor
-var cubo;
 for (var i=0;i<8;i++)
 {
 for (var j=0;j<8;j++)
 {
-var cubo= new THREE.Mesh( new THREE.BoxGeometry(10,10,-10));
+cubo= new THREE.Mesh( new THREE.BoxGeometry(10,10,-10));
   cubo.position.x =j*10;
   cubo.position.z=-i*10;
   escena.add(cubo);
@@ -155,11 +154,11 @@ escena.add(pelota);
   escena.add(camara);
   
 
-var renderizador = new THREE.WebGLRenderer();
+renderer = new THREE.WebGLRenderer();
 renderizador.setSize(window.innerWidth, window.innerHeight);
 
-document.body.appendChild(renderizador.domElement);
-renderizador.render(escena, camara);
+document.body.appendChild(renderer.domElement);
+renderer.render(escena, camara);
 step=0.05;
 }
 function loop(){
@@ -177,10 +176,10 @@ raycaster2.set(pelota.position, new THREE.Vector3(-1,0,0));
 renderer.render(escena,camara);
 requestAnimationFrame(loop);
 }
-
 var cubo1, cubo2,cubo, escena, camara;
 var renderer,pelota,reyMalla,reyMalla2;
 var raycaster1,step,raycaster2;
 var obstaculo1, obstaculo2;
+
 setup();
 loop()
