@@ -11,6 +11,7 @@ cubo1.position.x= 7;
 cubo2.position.x= -7;
 cubo1.position.y=7;
 cubo2.position.y=7;
+  pelota.position.y=7;
 //Figura1
 
 //CRUZ
